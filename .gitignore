@@ -1,4 +1,4 @@
 .env
 *.mdf
 *.ldf
-mysql/mysql.sock
+db-data/mysql.sock
