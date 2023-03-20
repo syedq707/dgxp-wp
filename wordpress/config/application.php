@@ -12,7 +12,7 @@
 
     $url = "https://digitalgxp.com/blog/";
     define('WP_HOME', $url);
-    define('WP_SITEURL', "$url");
+    define('WP_SITEURL', $url);
 
     define('WP_CONTENT_DIR', "$full_root_path/wp-content");
     define('WP_CONTENT_URL', "$url/wp-content");
