@@ -44,7 +44,7 @@ services:
     env_file:
       - ./.env
     environment:
-      UPLOAD_LIMIT: 512M
+      UPLOAD_LIMIT: 64M
     restart: always
     volumes:
       - ./wordpress:/var/www/html:delegated
@@ -61,7 +61,7 @@ services:
       - 3001:80
     environment:
       PMA_HOST: mysql:3306
-      UPLOAD_LIMIT: 512M
+      UPLOAD_LIMIT: 64M
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 
 volumes:
