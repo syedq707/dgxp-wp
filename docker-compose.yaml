@@ -43,11 +43,12 @@ services:
     container_name: php
     env_file:
       - ./.env
-    environment:
-      UPLOAD_LIMIT: 64M
+    # environment:
+    #   UPLOAD_LIMIT: 128M
     restart: always
     volumes:
       - ./wordpress:/var/www/html:delegated
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
   #phpmyadmin
   phpmyadmin:
@@ -57,10 +58,10 @@ services:
     container_name: phpmyadmin
     restart: always
     ports:
-      - "3001:80"
+      - 3001:80
     environment:
       PMA_HOST: mysql:3306
-      UPLOAD_LIMIT: 64M
+      UPLOAD_LIMIT: 512M
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 
 volumes:
