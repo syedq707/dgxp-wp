@@ -43,8 +43,8 @@ services:
     container_name: php
     env_file:
       - ./.env
-    # environment:
-    #   UPLOAD_LIMIT: 128M
+    environment:
+      UPLOAD_LIMIT: 512M
     restart: always
     volumes:
       - ./wordpress:/var/www/html:delegated
