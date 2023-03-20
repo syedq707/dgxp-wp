@@ -1,10 +1,9 @@
-version: '3.9'
+version: "3.9"
 
 # networks:
 #   wordpress:
 
 services:
-
   #Nginx server for WordPress
   nginx:
     image: nginx:stable-alpine
@@ -36,7 +35,6 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
-
   #PHP
   php:
     build:
@@ -45,11 +43,12 @@ services:
     container_name: php
     env_file:
       - ./.env
+    environment:
+      UPLOAD_LIMIT: 64M
     restart: always
     volumes:
       - ./wordpress:/var/www/html:delegated
 
-  
   #phpmyadmin
   phpmyadmin:
     depends_on:
@@ -58,9 +57,10 @@ services:
     container_name: phpmyadmin
     restart: always
     ports:
-      - '3001:80'
+      - "3001:80"
     environment:
       PMA_HOST: mysql:3306
+      UPLOAD_LIMIT: 64M
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
 
 volumes:
