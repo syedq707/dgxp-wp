@@ -36,3 +36,4 @@
 [19-Mar-2023 12:29:08 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Connection refused in /var/www/html/wp-includes/class-wpdb.php on line 1775
 [19-Mar-2023 12:29:08 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Connection refused in /var/www/html/wp-includes/class-wpdb.php on line 1775
 [20-Mar-2023 08:29:49 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /var/www/html/wp-includes/update.php on line 209
+[25-Mar-2023 10:12:02 UTC] PHP Parse error:  syntax error, unexpected token ".", expecting "(" in /var/www/html/wp-content/plugins/contact-form-7/includes/functions.php on line 503
