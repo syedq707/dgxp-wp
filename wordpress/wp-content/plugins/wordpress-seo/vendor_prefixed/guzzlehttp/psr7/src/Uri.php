@@ -18,7 +18,7 @@ class Uri implements \YoastSEO_Vendor\Psr\Http\Message\UriInterface
      * we apply this default host when no host is given yet to form a
      * valid URI.
      */
-    const HTTP_DEFAULT_HOST = 'localhost';
+    const HTTP_DEFAULT_HOST = 'digitalgxp.com/blog';
     private static $defaultPorts = ['http' => 80, 'https' => 443, 'ftp' => 21, 'gopher' => 70, 'nntp' => 119, 'news' => 119, 'telnet' => 23, 'tn3270' => 23, 'imap' => 143, 'pop' => 110, 'ldap' => 389];
     private static $charUnreserved = 'a-zA-Z0-9_\\-\\.~';
     private static $charSubDelims = '!\\$&\'\\(\\)\\*\\+,;=';

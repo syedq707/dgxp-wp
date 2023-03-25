@@ -230,7 +230,7 @@ class WP_REST_URL_Details_Controller extends WP_REST_Controller {
 		 * REST endpoint are being unintentionally blocked as they are misidentified as pingback requests.
 		 * By slightly modifying the UA string, but still retaining the "WordPress" identification (via "WP")
 		 * we are able to work around this issue.
-		 * Example UA string: `WP-URLDetails/5.9-alpha-51389 (+http://localhost:8888)`.
+		 * Example UA string: `WP-URLDetails/5.9-alpha-51389 (+http://digitalgxp.com/blog:8888)`.
 		*/
 		$modified_user_agent = 'WP-URLDetails/' . get_bloginfo( 'version' ) . ' (+' . get_bloginfo( 'url' ) . ')';
 

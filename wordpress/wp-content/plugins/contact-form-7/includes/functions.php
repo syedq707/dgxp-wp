@@ -498,11 +498,11 @@ function wpcf7_count_code_units( $text ) {
 
 
 /**
- * Returns true if WordPress is running on the localhost.
+ * Returns true if WordPress is running on the digitalgxp.com/blog.
  */
-function wpcf7_is_localhost() {
+function wpcf7_is_digitalgxp.com/blog() {
 	$sitename = wp_parse_url( network_home_url(), PHP_URL_HOST );
-	return in_array( strtolower( $sitename ), array( 'localhost', '127.0.0.1' ) );
+	return in_array( strtolower( $sitename ), array( 'digitalgxp.com/blog', '127.0.0.1' ) );
 }
 
 

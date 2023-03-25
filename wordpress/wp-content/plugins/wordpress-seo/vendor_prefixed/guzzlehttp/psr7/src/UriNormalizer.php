@@ -44,13 +44,13 @@ final class UriNormalizer
     /**
      * Removes the default host of the given URI scheme from the URI.
      *
-     * Only the "file" scheme defines the default host "localhost".
-     * All of `file:/myfile`, `file:///myfile`, and `file://localhost/myfile`
+     * Only the "file" scheme defines the default host "digitalgxp.com/blog".
+     * All of `file:/myfile`, `file:///myfile`, and `file://digitalgxp.com/blog/myfile`
      * are equivalent according to RFC 3986. The first format is not accepted
      * by PHPs stream functions and thus already normalized implicitly to the
      * second format in the Uri class. See `GuzzleHttp\Psr7\Uri::composeComponents`.
      *
-     * Example: file://localhost/myfile → file:///myfile
+     * Example: file://digitalgxp.com/blog/myfile → file:///myfile
      */
     const REMOVE_DEFAULT_HOST = 8;
     /**
@@ -119,7 +119,7 @@ final class UriNormalizer
         if ($flags & self::CONVERT_EMPTY_PATH && $uri->getPath() === '' && ($uri->getScheme() === 'http' || $uri->getScheme() === 'https')) {
             $uri = $uri->withPath('/');
         }
-        if ($flags & self::REMOVE_DEFAULT_HOST && $uri->getScheme() === 'file' && $uri->getHost() === 'localhost') {
+        if ($flags & self::REMOVE_DEFAULT_HOST && $uri->getScheme() === 'file' && $uri->getHost() === 'digitalgxp.com/blog') {
             $uri = $uri->withHost('');
         }
         if ($flags & self::REMOVE_DEFAULT_PORT && $uri->getPort() !== null && \YoastSEO_Vendor\GuzzleHttp\Psr7\Uri::isDefaultPort($uri)) {

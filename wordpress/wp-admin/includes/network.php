@@ -34,7 +34,7 @@ function network_domain_check() {
  */
 function allow_subdomain_install() {
 	$domain = preg_replace( '|https?://([^/]+)|', '$1', get_option( 'home' ) );
-	if ( parse_url( get_option( 'home' ), PHP_URL_PATH ) || 'localhost' === $domain || preg_match( '|^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$|', $domain ) ) {
+	if ( parse_url( get_option( 'home' ), PHP_URL_PATH ) || 'digitalgxp.com/blog' === $domain || preg_match( '|^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$|', $domain ) ) {
 		return false;
 	}
 
@@ -296,16 +296,16 @@ function network_step1( $errors = false ) {
 
 		<h3><?php esc_html_e( 'Network Details' ); ?></h3>
 		<table class="form-table" role="presentation">
-		<?php if ( 'localhost' === $hostname ) : ?>
+		<?php if ( 'digitalgxp.com/blog' === $hostname ) : ?>
 			<tr>
 				<th scope="row"><?php esc_html_e( 'Sub-directory Installation' ); ?></th>
 				<td>
 				<?php
 					printf(
-						/* translators: 1: localhost, 2: localhost.localdomain */
+						/* translators: 1: digitalgxp.com/blog, 2: digitalgxp.com/blog.localdomain */
 						__( 'Because you are using %1$s, the sites in your WordPress network must use sub-directories. Consider using %2$s if you wish to use sub-domains.' ),
-						'<code>localhost</code>',
-						'<code>localhost.localdomain</code>'
+						'<code>digitalgxp.com/blog</code>',
+						'<code>digitalgxp.com/blog.localdomain</code>'
 					);
 					// Uh oh:
 				if ( ! allow_subdirectory_install() ) {

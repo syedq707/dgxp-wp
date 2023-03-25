@@ -117,7 +117,7 @@ class SimplePie_IRI
 			'port' => 2628
 		),
 		'file' => array(
-			'ihost' => 'localhost'
+			'ihost' => 'digitalgxp.com/blog'
 		),
 		'http' => array(
 			'port' => 80,

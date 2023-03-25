@@ -185,7 +185,7 @@ function wpcf7_is_email_in_domain( $email, $domain ) {
  * Checks whether an email address belongs to the site domain.
  */
 function wpcf7_is_email_in_site_domain( $email ) {
-	if ( wpcf7_is_localhost() ) {
+	if ( wpcf7_is_digitalgxp.com/blog() ) {
 		return true;
 	}
 

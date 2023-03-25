@@ -128,7 +128,7 @@ class WPCF7_ContactFormTemplate {
 	public static function from_email() {
 		$admin_email = get_option( 'admin_email' );
 
-		if ( wpcf7_is_localhost() ) {
+		if ( wpcf7_is_digitalgxp.com/blog() ) {
 			return $admin_email;
 		}
 

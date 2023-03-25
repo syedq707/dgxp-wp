@@ -68,13 +68,13 @@ class SQ_Models_Indexnow {
 	}
 
     /**
-     * Get the current domain host or localhost
+     * Get the current domain host or digitalgxp.com/blog
      * @return array|bool|mixed|string|null
      */
 	public function getHost() {
 		$host = wp_parse_url( home_url(), PHP_URL_HOST );
 		if ( empty( $host ) ) {
-			$host = 'localhost';
+			$host = 'digitalgxp.com/blog';
 		}
 
 		return $host;
