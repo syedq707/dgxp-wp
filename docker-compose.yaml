@@ -4,21 +4,6 @@ version: "3.9"
 #   wordpress:
 
 services:
-  #Nginx server for WordPress
-  # nginx:
-  #   image: nginx:stable-alpine
-  #   ports:
-  #     - 3000:80
-  #   env_file:
-  #     - ./.env
-  #   depends_on:
-  #     - php
-  #     - mysql
-  #   # restart: always
-  #   volumes:
-  #     - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-  #     - ./wordpress:/var/www/html:delegated
-
   #MySQL Database
   mysql:
     image: mysql:latest
