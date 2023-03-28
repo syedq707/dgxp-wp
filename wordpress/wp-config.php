@@ -23,6 +23,7 @@ define('WP_HOME', "https://digitalgxp.com/blog");
 define('WP_SITEURL', "https://digitalgxp.com/blog");
 
 // Rewrite your access URL to the admin page
+$_SERVER['REQUEST_URI'] = '/blog' . $_SERVER['REQUEST_URI'];
 $_SERVER['REQUEST_URI'] = str_replace("/wp-admin/", "/blog/wp-admin/",  $_SERVER['REQUEST_URI']);
 
 
