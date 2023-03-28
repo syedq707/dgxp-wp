@@ -19,8 +19,11 @@
  */
 
  $url = "https://digitalgxp.com/blog/";
- define('WP_HOME', "https://digitalgxp.com/blog/");
- define('WP_SITEURL', "https://digitalgxp.com/");
+ define('WP_HOME', "https://digitalgxp.com/blog");
+ define('WP_SITEURL', "https://digitalgxp.com/blog");
+
+ // Rewrite your access URL to the admin page
+$_SERVER['REQUEST_URI'] = str_replace("/wp-admin/", "/blog/wp-admin/",  $_SERVER['REQUEST_URI']);
 
 
 // ** Database settings - You can get this info from your web host ** //
