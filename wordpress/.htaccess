@@ -4,6 +4,4 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^(www.)?digitalgxp.com/$
 RewriteRule ^(/)?$ blog[L]
 
-Redirect 301 /wp-login.php https://digitalgxp.com/blog/wp-login.php
-
 # END WordPress Multisite
