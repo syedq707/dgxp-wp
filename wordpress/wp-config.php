@@ -19,8 +19,8 @@
  */
 
  $url = "https://digitalgxp.com/blog/";
- define('WP_HOME', "$url");
- define('WP_SITEURL', "$url");
+ define('WP_HOME', "https://digitalgxp.com/blog/");
+ define('WP_SITEURL', "https://digitalgxp.com/");
 
 
 // ** Database settings - You can get this info from your web host ** //
