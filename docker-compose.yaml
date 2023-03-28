@@ -21,7 +21,7 @@ services:
 
   #Wordpress
   wordpress:
-    image: wordpress
+    image: wordpress:fpm-alpine
     container_name: wordpress
     links:
       - mysql
