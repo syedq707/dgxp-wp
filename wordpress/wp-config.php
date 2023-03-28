@@ -19,8 +19,8 @@
  */
 
 $url = "https://digitalgxp.com/blog/";
-define('WP_HOME', "https://digitalgxp.com/blog");
-define('WP_SITEURL', "https://digitalgxp.com/blog");
+define('WP_HOME', "https://digitalgxp.com/blog/");
+define('WP_SITEURL', "https://digitalgxp.com/blog/");
 
 // Rewrite your access URL to the admin page
 // $_SERVER['REQUEST_URI'] = '/blog' . $_SERVER['REQUEST_URI'];
