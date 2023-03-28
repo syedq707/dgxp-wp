@@ -1,8 +1,8 @@
 # BEGIN WordPress Multisite
 
 
-# RewriteEngine On
-# RewriteCond %{HTTP_HOST} ^(www.)?digitalgxp.com/$
-# RewriteRule ^(/)?$ my_subdir[L]
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^(www.)?digitalgxp.com/$
+RewriteRule ^(/)?$ my_subdir[L]
 
 # END WordPress Multisite
