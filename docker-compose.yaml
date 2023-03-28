@@ -37,7 +37,7 @@ services:
       WORDPRES_DB_NAME: ${MYSQL_DATABASE}
       WORDPRES_DB_USER: ${MYSQL_USER}
       WORDPRES_DB_PASSWORD: ${MYSQL_PASSWORD}
-    #working_dir: /var/www/html/blog
+    working_dir: /var/www/html/blog
     volumes:
       - ./wordpress:/var/www/html/
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
