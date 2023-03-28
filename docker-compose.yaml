@@ -39,7 +39,8 @@ services:
       WORDPRES_DB_PASSWORD: ${MYSQL_PASSWORD}
     working_dir: /var/www/html/blog
     volumes:
-      - ./wordpress:/var/www/html/
+      - ./wordpress:/var/www/html/blog
+      - ./index.php:/var/www/html/index.php
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
   #phpmyadmin
