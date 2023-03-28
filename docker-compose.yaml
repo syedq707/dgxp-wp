@@ -39,7 +39,7 @@ services:
 
   #Wordpress
   wordpress:
-    image: wordpress:fpm-alpine
+    image: wordpress:6.1-fpm-alpine
     container_name: wordpress
     links:
       - mysql
