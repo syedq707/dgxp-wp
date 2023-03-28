@@ -40,6 +40,7 @@ services:
     working_dir: /var/www/html/blog
     volumes:
       - ./wordpress:/var/www/html/blog
+      - ./.htaccess:/var/www/html/.htaccess
       - ./index.php:/var/www/html/index.php
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
