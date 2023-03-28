@@ -7,4 +7,6 @@
     RewriteRule ^(.*)$ /blog/$1
     RewriteCond %{HTTP_HOST} ^(www.)?digitalgxp.com$
     RewriteRule ^(/)?$ blog/index.php [L]
+    RewriteCond %{HTTP_HOST} ^(www.)?example.com$
+    RewriteRule ^(/)?$ blog[L]
 </IfModule>
