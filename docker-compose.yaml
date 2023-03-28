@@ -17,7 +17,10 @@ services:
     restart: always
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
-      - ./wordpress:/var/www/html:delegated
+      - ./wordpress:/var/www/html/blog
+      - ./.htaccess:/var/www/html/.htaccess
+      - ./index.php:/var/www/html/index.php
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
   #MySQL Database
   mysql:
@@ -25,8 +28,7 @@ services:
     container_name: mysql
     volumes:
       - mysql-data:/var/lib/mysql
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
-    restart: always
+    # restart: always
     ports:
       - 3306:3306
     environment:
@@ -35,19 +37,29 @@ services:
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
 
-  #PHP
-  php:
-    build:
-      context: .
-      dockerfile: php.dockerfile
-    container_name: php
+  #Wordpress
+  wordpress:
+    image: wordpress:fpm-alpine
+    container_name: wordpress
+    links:
+      - mysql
+    depends_on:
+      - mysql
+    ports:
+      - 3002:80
     env_file:
       - ./.env
     environment:
       UPLOAD_LIMIT: 64M
-    restart: always
+      WORDPRES_DB_HOST: ${DB_HOST}
+      WORDPRES_DB_NAME: ${MYSQL_DATABASE}
+      WORDPRES_DB_USER: ${MYSQL_USER}
+      WORDPRES_DB_PASSWORD: ${MYSQL_PASSWORD}
+    working_dir: /var/www/html/blog
     volumes:
-      - ./wordpress:/var/www/html:delegated
+      - ./wordpress:/var/www/html/blog
+      - ./.htaccess:/var/www/html/.htaccess
+      - ./index.php:/var/www/html/index.php
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
   #phpmyadmin
@@ -56,7 +68,7 @@ services:
       - mysql
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
-    restart: always
+    # restart: always
     ports:
       - 3001:80
     environment:

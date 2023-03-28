@@ -1,0 +1,7 @@
+# BEGIN WordPress Multisite
+
+RewriteEngine On
+RewriteBase /
+RewriteRule ^blog/(.\*)$ /$1 [L]
+
+# END WordPress Multisite
