@@ -18,21 +18,26 @@
  * @package WordPress
  */
 
+ $url = "https://digitalgxp.com/blog/";
+ define('WP_HOME', "$url");
+ define('WP_SITEURL', "$url");
+
+
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'wordpress' );
+define( 'DB_NAME', getenv('MYSQL_DATABASE') );
 
 /** Database username */
-define( 'DB_USER', 'wp-root' );
+define( 'DB_USER', getenv('MYSQL_USER') );
 
 /** Database password */
-define( 'DB_PASSWORD', 'MI3DlF9hmB' );
+define( 'DB_PASSWORD', getenv('MYSQL_PASSWORD') );
 
 /** Database hostname */
-define( 'DB_HOST', 'mysql' );
+define( 'DB_HOST', getenv('DB_HOST') );
 
 /** Database charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8mb4' );
+define( 'DB_CHARSET', getenv('DB_CHARSET') );
 
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
