@@ -36,3 +36,38 @@
 [19-Mar-2023 12:29:08 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Connection refused in /var/www/html/wp-includes/class-wpdb.php on line 1775
 [19-Mar-2023 12:29:08 UTC] PHP Warning:  mysqli_real_connect(): (HY000/2002): Connection refused in /var/www/html/wp-includes/class-wpdb.php on line 1775
 [20-Mar-2023 08:29:49 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /var/www/html/wp-includes/update.php on line 209
+[29-Mar-2023 07:00:07 UTC] Sync process for Gutenberg Blocks has started.
+[29-Mar-2023 07:00:07 UTC] CATEGORY:Importing categories..
+[29-Mar-2023 07:00:08 UTC] CATEGORY:Storing in option ast-block-templates-categories
+[29-Mar-2023 07:00:08 UTC] CATEGORY:Completed category import.
+[29-Mar-2023 07:00:08 UTC] BLOCK: Getting Total Blocks
+[29-Mar-2023 07:00:08 UTC] BLOCK: https://websitedemos.net/wp-json/astra-blocks/v1/get-blocks-count/?page_builder=gutenberg&wireframe=yes
+[29-Mar-2023 07:00:10 UTC] BLOCK: Requests count 4
+[29-Mar-2023 07:00:10 UTC] BLOCK: Importing request 1 ..
+[29-Mar-2023 07:00:10 UTC] BLOCK: https://websitedemos.net/wp-json/astra-blocks/v1/blocks/?page_builder=gutenberg&per_page=100&page=1&wireframe=yes
+[29-Mar-2023 07:00:10 UTC] BLOCK: Storing in option ast-block-templates-blocks-1
+[29-Mar-2023 07:00:10 UTC] BLOCK: Completed request 1
+[29-Mar-2023 07:00:10 UTC] BLOCK: Importing request 2 ..
+[29-Mar-2023 07:00:10 UTC] BLOCK: https://websitedemos.net/wp-json/astra-blocks/v1/blocks/?page_builder=gutenberg&per_page=100&page=2&wireframe=yes
+[29-Mar-2023 07:00:10 UTC] BLOCK: Storing in option ast-block-templates-blocks-2
+[29-Mar-2023 07:00:10 UTC] BLOCK: Completed request 2
+[29-Mar-2023 07:00:10 UTC] BLOCK: Importing request 3 ..
+[29-Mar-2023 07:00:10 UTC] BLOCK: https://websitedemos.net/wp-json/astra-blocks/v1/blocks/?page_builder=gutenberg&per_page=100&page=3&wireframe=yes
+[29-Mar-2023 07:00:11 UTC] BLOCK: Storing in option ast-block-templates-blocks-3
+[29-Mar-2023 07:00:11 UTC] BLOCK: Completed request 3
+[29-Mar-2023 07:00:11 UTC] BLOCK: Importing request 4 ..
+[29-Mar-2023 07:00:11 UTC] BLOCK: https://websitedemos.net/wp-json/astra-blocks/v1/blocks/?page_builder=gutenberg&per_page=100&page=4&wireframe=yes
+[29-Mar-2023 07:00:11 UTC] BLOCK: Storing in option ast-block-templates-blocks-4
+[29-Mar-2023 07:00:11 UTC] BLOCK: Completed request 4
+[29-Mar-2023 07:00:11 UTC] SITE: Getting Total Sites
+[29-Mar-2023 07:00:11 UTC] SITE: https://websitedemos.net/wp-json/astra-sites/v1/get-total-pages/?page_builder=gutenberg
+[29-Mar-2023 07:00:12 UTC] SITE: Request count 2
+[29-Mar-2023 07:00:12 UTC] SITE: Importing request 1 ..
+[29-Mar-2023 07:00:12 UTC] SITE: https://websitedemos.net/wp-json/astra-sites/v1/sites-and-pages/?per_page=100&page=1&page-builder=gutenberg
+[29-Mar-2023 07:00:13 UTC] SITE: Storing in option ast-block-templates-sites-1
+[29-Mar-2023 07:00:13 UTC] SITE: Completed request 1
+[29-Mar-2023 07:00:13 UTC] SITE: Importing request 2 ..
+[29-Mar-2023 07:00:13 UTC] SITE: https://websitedemos.net/wp-json/astra-sites/v1/sites-and-pages/?per_page=100&page=2&page-builder=gutenberg
+[29-Mar-2023 07:00:13 UTC] SITE: Storing in option ast-block-templates-sites-2
+[29-Mar-2023 07:00:13 UTC] SITE: Completed request 2
+[29-Mar-2023 07:00:13 UTC] Sync process for Gutenberg Blocks is done.

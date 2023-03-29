@@ -10,7 +10,7 @@
         $protocol = 'https';
     }
 
-    $url = "https://digitalgxp.com/blog";
+    $url = "http://localhost";
     define('WP_HOME', "$url/");
     define('WP_SITEURL', "$url/");
 
